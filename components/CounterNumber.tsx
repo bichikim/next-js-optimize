@@ -3,7 +3,7 @@ import {$React} from '@legendapp/state/react-web'
 import {StateProps} from './types'
 
 /**
- * It just work with same solution as SolidJS Lol
+ * This component works in the same way as SolidJS.
  * @param param0
  * @returns
  */
