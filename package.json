@@ -38,7 +38,9 @@
         "playwright": "^1.53.1",
         "@testing-library/react": "^16.3.0",
         "@vitejs/plugin-react": "^4.5.2",
+        "@testing-library/jest-dom": "^6.6.3",
         "vitest-browser-react": "^0.3.0",
-        "vitest": "^3.2.4"
+        "vitest": "^3.2.4",
+        "flush-promises": "^1.0.2"
     }
 }

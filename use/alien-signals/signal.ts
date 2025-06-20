@@ -12,5 +12,5 @@ const markedSignal = <T>(initialValue: T): Signal<T> => {
 export const signal = markedSignal
 
 export const isSignal = (value: any): value is Signal<any> => {
-    return value && value[SIGNAL_MARKER] === true
+    return value && value[SIGNAL_MARKER]
 }

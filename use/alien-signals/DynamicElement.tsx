@@ -53,7 +53,12 @@ export const DynamicElement: DynamicElementComponent = ({children, _as, ...props
     useEffect(() => {
         const stop = effectScope(() => {
             effect(() => {
-                setArgs(getAllSignalsValue(reactiveArgs))
+                const nextReactiveArgs = getAllSignalsValue(reactiveArgs)
+                if (isFirstRender.current) {
+                    isFirstRender.current = false
+                } else {
+                    setArgs(nextReactiveArgs)
+                }
             })
         })
 
@@ -62,7 +67,5 @@ export const DynamicElement: DynamicElementComponent = ({children, _as, ...props
         }
     }, [reactiveArgs, isFirstRender])
 
-    isFirstRender.current = false
-
-    return createElement(_as, { ...args}, children)
+    return createElement(_as, {...restProps, ...args}, children)
 }
