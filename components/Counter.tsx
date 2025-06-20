@@ -1,6 +1,6 @@
 'use client'
 
-import {useObservable, Memo} from '@legendapp/state/react'
+import {useObservable} from '@legendapp/state/react'
 import {useState} from 'react'
 import {CounterNumber} from './CounterNumber'
 
